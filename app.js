@@ -5,6 +5,8 @@ const pcScoreElem = document.getElementById('pcScore');
 const messageElem = document.getElementById('message');
 const playerChoice = document.getElementById('playerChoice');
 const pcChoice = document.getElementById('pcChoice');
+const showRulesBtn = document.getElementById('showRulesBtn');
+const modalWindow = document.getElementById('modalWindow');
 const score = {
     player: 0,
     pc: 0
@@ -45,4 +47,14 @@ weaponButtons.forEach(function(btn) {
     
         messageElem.textContent = message;
     });
+});
+
+showRulesBtn.addEventListener('click', function() {
+    modalWindow.style.display = 'block';
+});
+
+modalWindow.addEventListener('click', function(e) {
+    if(e.target.classList.contains('modal') || e.target.classList.contains('close-modal-btn')) {
+        modalWindow.style.display = 'none';
+    }
 });

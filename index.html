@@ -12,11 +12,10 @@
     
         <div class="score">
             <div>You: <span id="playerScore">0</span></div>
+            <div id="message" class="message wiskers">Try your luck!</div>
             <div>Computer: <span id="pcScore">0</span></div>
         </div>
 
-        <div id="message" class="message">Try your luck!</div>
-    
         <div class="players-choices">
             <div id="playerChoice" class="choice-window player-choise"></div>
             <div id="pcChoice" class="choice-window pc-choise"></div>
@@ -29,6 +28,18 @@
                 <button data-weapon="paper" class="weapon-btn"></button>
                 <button data-weapon="scissors" class="weapon-btn"></button>
             </div>
+        </div>
+        
+        <button id="showRulesBtn" class="show-rules-btn">Rules</button>
+    </div>
+
+    <div id="modalWindow" class="modal">
+        <div class="modal-content">
+            <h3 class="wiskers">Game rules</h3>
+            <p><span class="marked">Rock</span> wins against <span class="marked">scissors</span>.<br>
+                <span class="marked">Scissors</span> win against <span class="marked">paper</span>.<br>
+                <span class="marked">Paper</span> wins against <span class="marked">rock</span>.</p>
+            <button class="close-modal-btn">Close</button>
         </div>
     </div>
 
