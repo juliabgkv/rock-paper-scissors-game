@@ -1,0 +1,147 @@
+@import url('https://fonts.cdnfonts.com/css/cat-whiskers');
+
+body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cat Whiskers', sans-serif;
+    background-color: #a8a8a8;                          
+}
+
+.container {
+    min-width: 980px;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.title {
+    letter-spacing: 10px;
+    font-size: 60px;
+    margin: 20px 0 40px 0;
+    color: #000;
+    text-align: center;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    font-size: 35px;
+    color: #fff;
+}
+
+.message {
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+    margin: 20px auto;
+}
+
+.message::before {
+    margin-right: 10px;
+    content: "\269E";
+}
+
+.message::after {
+    margin-left: 10px;
+    content: "\269F";
+}
+
+.players-choices {
+    height: 350px;
+    margin: 0 20px;
+    border: 3px solid #000;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.players-choices .choice-window {
+    width: 200px;
+    height: 500px;
+    background-size: 200px 500px;
+}
+
+.players-choices .choice-window.player-choise,
+.players-choices .choice-window.pc-choise {
+    position: relative;
+    top: calc(50% - 250px);
+}
+
+.players-choices .choice-window.player-choise {
+    left: 85px;
+    transform: rotate(90deg) translateY(20px);
+}
+
+.players-choices .choice-window.pc-choise {
+    right: 85px;
+    transform: rotate(-90deg);
+}
+
+.players-choices .choice-window[data-weapon="rock"] {
+    background-image: url(./assets/rock.png);
+}
+
+.players-choices .choice-window[data-weapon="paper"] {
+    background-image: url(./assets/paper.png);
+}
+
+.players-choices .choice-window[data-weapon="scissors"] {
+    background-image: url(./assets/scissors.png);
+}
+
+.weapon-container h4 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.weapon-buttons {
+    margin: auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid #000;
+    overflow: hidden;
+}
+
+.weapon-buttons .weapon-btn {
+    border: none;
+    background-color: transparent;
+    width: 100px;
+    height: 180px;
+    background-size: cover;
+    position: relative;
+    top: 10px;
+}
+
+.weapon-buttons .weapon-btn:hover {
+    transform: translateY(-5px) scale(1.01);
+    transition: all 200ms ease-in-out;
+}
+
+.weapon-buttons .weapon-btn:hover {
+    cursor: pointer;
+}
+
+.weapon-buttons .weapon-btn[data-weapon="rock"] {
+    background-image: url(./assets/rock.png);
+}
+
+.weapon-buttons .weapon-btn[data-weapon="paper"] {
+    background-image: url(./assets/paper.png);
+}
+
+.weapon-buttons .weapon-btn[data-weapon="scissors"] {
+    background-image: url(./assets/scissors.png);
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+}
