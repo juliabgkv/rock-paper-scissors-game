@@ -5,8 +5,12 @@ body, * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cat Whiskers', sans-serif;                    
+}
+
+body {
     font-family: 'Cat Whiskers', sans-serif;
-    background-color: #a8a8a8;                          
+    background-color: #a8a8a8;   
 }
 
 .container {
@@ -20,6 +24,91 @@ body, * {
     margin: auto;
 }
 
+/* ======== Sound toggler styles=========*/
+
+.hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.slider {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0 3px gray;
+}
+
+.audio-setting:checked + .slider {
+    background: #000;  
+}
+
+.audio-setting:not(:checked) + .slider {
+    background: gray;
+}
+
+.audio-setting:not(:checked) + .slider:before {
+    right: 30px;
+}
+
+.material-symbols-outlined.icon {
+    font-size: 28px;
+}
+
+.slider:before {
+    line-height: 20px;
+    text-align: center;  
+}
+
+.audio_icon {
+    position: absolute;
+    top: 22px;
+    -webkit-transition:  0.4s;
+    transition:  0.4s;
+}
+
+.icon_on {
+    left: 20px;
+    opacity: 0;
+}
+
+.icon_off {
+    left: 50px;
+    opacity: 0;
+}
+
+.icon_on.active {
+    left: 50px;
+    opacity: 1;
+}
+
+.icon_off.active {
+    left: 21px;
+    opacity: 1;
+}
+
+/* ======== Sound toggler styles END =========*/
 
 .title {
     letter-spacing: 10px;
@@ -160,6 +249,7 @@ body, * {
     width: 80px;
     height: 40px;
     border: none;
+    background-color: transparent;
     margin-left: 20px;
     font-size: 40px;
     letter-spacing: 2px;
