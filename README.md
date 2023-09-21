@@ -8,3 +8,7 @@ Classic Rock, Paper, Scissors game using Vanilla JavaScript. User can play game 
 
 ![App Screenshot](https://raw.githubusercontent.com/juliabgkv/rock-paper-scissors-game/main/rockpaperscissors_screenshot.png)
 
+
+## Demo
+
+https://juliabgkv.github.io/rock-paper-scissors-game/
